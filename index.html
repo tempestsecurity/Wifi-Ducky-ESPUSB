@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>..:: esp8266 ESPDUCKY ::..</title>
+    <script language="javascript" type="text/javascript" src=esp/jquery-2.1.4.min.js.gz></script>
+    <script language="javascript" type="text/javascript" src=esp/menuinterface2.js></script>
+    <script language="javascript" type="text/javascript" src=esp/main.js></script>
+
+    <style>
+    table { width: 100%; }
+    td { vertical-align: top; }
+    .collapsible { display:none; }
+    .inbutton { background-color:blue; }
+    #SystemMessage { position: fixed; top: 5px; background-color: DarkSlateBlue; color: #ffffff; left: 5px; display:none; }
+    .dragandrophandler { border:2px dotted #0B85A1; color:#92AAB0;vertical-align:middle;padding:10px 10px 10 10px;margin-bottom:10px;font-size:200%;}
+    .unsaved-input { border: 2px solid pink; border-radius: 7px; }
+    #MouseCap { border-radius: 25px; background: green; padding: 20px; width: 100%; height: 200px; }
+    .regbtn { border-radius: 5px; background: red; padding: 10px; width: 70px; height: 70px; }
+    </style>
+</head>
+
+<body class="sapUiBody" id="content">
+
+<h2>esp8266 ESPDUCKY</h2>
+<hr>
+<table id="MainMenu">
+
+<tbody>
+
+<tr><td width=1>
+<input type=submit onclick="ShowHideEvent( 'Introduction' );" value="Introduction"></td><td>
+<div id=Introduction class="collapsible">
+<table border=1><tr><td>
+<p>Welcome to the espusb/Ducky Script Web-based GUI.</p>
+<p>This GUI uses WebSockets, and has only been tested under the newest (as of May, 2020) Chrome and Firefox browsers.</p>
+</div></td></tr></table></td></tr>
+
+<tr><td width=1>
+<input type=submit onclick="ShowHideEvent( 'HID' ); KickHID();" value="Ducky Script"></td><td>
+<div id=HID class="collapsible">
+<table width=100% border=1><tr><td>
+
+
+<p>
+<iframe src="auto.html" height=500 width='750'></iframe>
+
+<input type=submit value="Exploit" id="bt_ducky" onclick="duckyExploit(-1)">
+</p>
+
+
+</td></tr></table>
+</div>
+</td>
+</tr>
+
+
+</tbody>
+
+</table>
+
+
+
+</body>
+</html>

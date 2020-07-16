@@ -1,0 +1,46 @@
+{
+  "_version": "1.8.0",
+  "sap.app": {
+    "id": "com.demo.textarea.autocomplete",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "TextArea Autocomplete",
+    "description": "TextArea Autocomplete",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.demo.textarea.autocomplete.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {},
+        "sap.viz": {}
+      }
+    },
+    "models": {
+      "dicData": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/dic.json"
+      }
+    },
+    "resources": {
+      "js": [{ "uri": "libs/jquery.textcomplete.js" }],
+      "css": [{ "uri": "styles/autocomplete.css" }]
+    }
+  }
+}
